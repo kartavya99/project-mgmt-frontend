@@ -8,7 +8,7 @@ const ProjectCard = ({ project }) => {
         <div className="card-body">
           <div className="d-flex justify-content-between align-items-center">
             <h5 className="card-title">{project.name}</h5>
-            <Link className="btn btn-light" to={`projects/${project.id}`}>
+            <Link className="btn btn-light" to={`projects/${project._id}`}>
               View
             </Link>
           </div>

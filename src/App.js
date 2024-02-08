@@ -6,6 +6,8 @@ import {
   createHttpLink,
 } from "@apollo/client";
 import Home from "./pages/Home";
+import Project from "./pages/Project";
+import NotFound from "./pages/NotFound";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 const httpLink = createHttpLink({
@@ -18,10 +20,9 @@ const client = new ApolloClient({
 });
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
+  { path: "/", element: <Home /> },
+  { path: "projects/:id", element: <Project /> },
+  { path: "*", element: <NotFound /> },
 ]);
 
 function App() {

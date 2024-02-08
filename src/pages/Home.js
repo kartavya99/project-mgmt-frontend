@@ -9,9 +9,9 @@ const Home = () => {
         <h1>Add Client Modal</h1>
         <h1>Add Project Modal</h1>
       </div>
-      <br />
+
       <Project />
-      <br />
+      <hr />
       <Clients />
     </>
   );

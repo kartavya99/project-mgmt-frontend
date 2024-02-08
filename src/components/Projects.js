@@ -5,6 +5,7 @@ import ProjectCard from "./ProjectCard";
 
 const Project = () => {
   const { loading, data, error } = useQuery(GET_PROJECTS);
+  console.log(data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: something went wrong</p>;
