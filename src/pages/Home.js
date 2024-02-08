@@ -1,4 +1,6 @@
 import React from "react";
+import Project from "../components/Projects";
+import Clients from "../components/Clients";
 
 const Home = () => {
   return (
@@ -7,8 +9,10 @@ const Home = () => {
         <h1>Add Client Modal</h1>
         <h1>Add Project Modal</h1>
       </div>
-      <div>Projects</div>
-      <div>Client</div>
+      <br />
+      <Project />
+      <br />
+      <Clients />
     </>
   );
 };

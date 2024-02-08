@@ -20,3 +20,12 @@ code {
   width: 30px;
   margin-right: 10px;
 }
+
+.trash {
+  background-color: #f24242 !important;
+  color: white !important;
+}
+
+.btn {
+  font-size: 15px;
+}
