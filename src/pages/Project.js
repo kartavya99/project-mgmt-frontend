@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_PROJECT } from "../utils/queries/projectQueries";
+import ClientInfo from "../components/ClientInfo";
 
 const Project = () => {
   const { id } = useParams();
@@ -9,6 +10,8 @@ const Project = () => {
   const { loading, data, error } = useQuery(GET_PROJECT, {
     variables: { projectId: id },
   });
+
+  console.log(data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: something went wrong</p>;
@@ -24,7 +27,7 @@ const Project = () => {
           <p>{data.fetchProject.description}</p>
           <h5 className="mt-3">Project Status</h5>
           <p className="lead">{data.fetchProject.status}</p>
-          <div>Client Info</div>
+          <ClientInfo client={data.fetchProject.clientId} />
           <div>Edit Project from button</div>
           <div>Delete project button</div>
         </div>

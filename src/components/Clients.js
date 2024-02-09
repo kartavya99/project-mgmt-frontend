@@ -5,6 +5,7 @@ import ClientRow from "./ClientRow";
 
 const Clients = () => {
   const { loading, data, error } = useQuery(GET_CLIENTS);
+  console.log(data);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: something went wrong</p>;
