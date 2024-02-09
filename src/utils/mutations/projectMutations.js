@@ -39,7 +39,7 @@ export const DELETE_PROJECT = gql`
 `;
 
 export const UPDATE_PROJECT = gql`
-  mutation updateProject($ProjectId: ID!, $status: Status!) {
+  mutation updateProject($projectId: ID!, $status: Status!) {
     updateProject(projectId: $projectId, status: $status) {
       _id
       name
@@ -47,9 +47,6 @@ export const UPDATE_PROJECT = gql`
       status
       clientId {
         _id
-        email
-        name
-        phone
       }
     }
   }
