@@ -39,7 +39,6 @@ A full stack web application build with MERN stack with GraphQL.
 - React.js
 - Node.js
 - GraphQl
-- Redux-toolkit
 - Apollo-Client
 - apollo-server-express
 
